@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grades</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #4CAF50;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2196F3;
+    }
+
+    form {
+      background-color: #e6f7ff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: calc(100% - 22px);
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #gradeResult, #averageResult {
+      font-size: 18px;
+      color: #555;
+      background-color: #fff3e0;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Grades</h1>
+
+  <h2>Add Grade</h2>
+  <form id="addGradeForm">
+    <input type="text" id="studentName" placeholder="Student Name" required />
+    <input type="text" id="subject" placeholder="Subject" required />
+    <input type="number" id="grade" placeholder="Grade" required />
+    <button type="submit">Add Grade</button>
+  </form>
+
+  <h2>Update Grade</h2>
+  <form id="updateGradeForm">
+    <input type="text" id="updateStudentName" placeholder="Student Name" required />
+    <input type="text" id="updateSubject" placeholder="Subject" required />
+    <input type="number" id="updateGrade" placeholder="New Grade" required />
+    <button type="submit">Update Grade</button>
+  </form>
+
+  <h2>Get Grade</h2>
+  <form id="getGradeForm">
+    <input type="text" id="getStudentName" placeholder="Student Name" required />
+    <input type="text" id="getSubject" placeholder="Subject" required />
+    <button type="submit">Get Grade</button>
+  </form>
+  <p id="gradeResult"></p>
+
+  <h2>Average Grade</h2>
+  <form id="averageGradeForm">
+    <input type="text" id="averageSubject" placeholder="Subject" required />
+    <button type="submit">Get Average Grade</button>
+  </form>
+  <p id="averageResult"></p>
+
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
